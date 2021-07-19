@@ -8,10 +8,11 @@ import {
 } from "react-router-dom";
 import Home from "./Views/Home";
 import About from "./Views/About";
+import Product from "./Views/Product";
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="relative pb-10 min-h-screen">
       <Router>
         <Header />
         <div className="p-3">
@@ -21,6 +22,9 @@ export default function App() {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/products/:id">
+              <Product />
             </Route>
           </Switch>
         </div>
